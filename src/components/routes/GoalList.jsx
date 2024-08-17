@@ -13,7 +13,7 @@ function GoalList() {
     //     setGoals(snapshot.docs.map(doc => doc.data()));
     // });
 
-    console.log(userGoals);
+    // console.log(userGoals);
 
     const [goals, setGoals] = useState([
         {

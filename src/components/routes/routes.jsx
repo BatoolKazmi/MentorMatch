@@ -5,6 +5,7 @@ import User  from "./User";
 import Chat from "./Chat";
 import GoalList from "./GoalList";
 import ScheduleAppointment from "../ScheduleAppointment";
+import GoalItem from "../GoalItem";
 
 const routes = [
   {
@@ -23,6 +24,10 @@ const routes = [
   {
     path: "/chat",
     element: <Chat />
+  }, 
+  {
+    path:"/goals",
+    element: <GoalList/>
   }
 ];
 
