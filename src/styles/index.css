@@ -19,13 +19,18 @@
     --light-purple: #c975eb;
     --hot-pink: #ff80a0;
     --light-pink:#ffc9dc;
+    --black: #31393C;
 
-    background-color: var(--dark-purple);
+    background: linear-gradient(90deg, var(--dark-purple), #8b8cd4);
     color: var(--light-one);
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Poller One", serif;
+}
+
+h1 {
+    
     font-size: 3em;
     margin: 1em 0em;
     text-align: center;
@@ -33,6 +38,44 @@ h1 {
 }
 
 h2{
-    font-family: "Poller One", serif;
     font-size: 1.5em;
+}
+
+span {
+    margin: 0 0.1em;
+}
+
+article {
+    border: 0.2em solid var(--yellow);
+    background-color: var(--yellow);
+    color: var(--black);
+    border-radius: 5px;
+    /* margin: 1em; */
+    max-width: 20em;
+    box-sizing: border-box;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+}
+
+main {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (min-width: 75em) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 100em) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
 }

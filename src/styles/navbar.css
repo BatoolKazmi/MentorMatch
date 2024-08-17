@@ -18,7 +18,7 @@ a.active {
     align-items: center;
     justify-content: space-between;
     border-bottom: var(--light-one) solid 0.2em;
-    background-color: var(var--dark-purple);
+    background-color: var(--dark-purple);
     padding: 1em;
 }
 
