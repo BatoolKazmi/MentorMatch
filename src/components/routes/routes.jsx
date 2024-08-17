@@ -3,8 +3,8 @@ import ErrorPage from "./Error";
 import Mentor from "./Mentor";
 import User  from "./User";
 import Chat from "./Chat";
-
 import GoalList from "./GoalList";
+
 const routes = [
   {
     path: "/",
