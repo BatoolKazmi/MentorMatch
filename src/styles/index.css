@@ -58,24 +58,6 @@ article {
     margin: 1em;
 }
 
-main {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-@media screen and (min-width: 75em) {
-
-    main {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media screen and (min-width: 100em) {
-
-    main {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
+b{
+    font-weight: 1000;
 }

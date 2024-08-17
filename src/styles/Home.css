@@ -1,0 +1,21 @@
+.cards {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 1em;
+    
+}
+
+.cards h3{
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 1em;
+    border: var(--black) 0.2em solid;
+}
