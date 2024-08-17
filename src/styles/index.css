@@ -1,0 +1,38 @@
+@import url(reset.css);
+/* Podkova for body text*/
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Cutive+Mono&family=Dancing+Script:wght@400..700&family=Noto+Sans+Mono:wght@100..900&family=Podkova:wght@400..800&family=Share+Tech+Mono&display=swap');
+/* Pollar One for headers */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Cutive+Mono&family=Dancing+Script:wght@400..700&family=Noto+Sans+Mono:wght@100..900&family=Podkova:wght@400..800&family=Poller+One&family=Share+Tech+Mono&display=swap');
+
+
+:root {
+    /** include the system-ui font family here **/
+    font-family: "Podkova", serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-size: 1em;
+
+    /* defining color properties */
+    --light-one: #fdfdfd;
+    --light-brown: 	#eed29c;
+    --dark-purple: #5e5fab;
+    --yellow: #ffcc6b;
+    --light-purple: #c975eb;
+    --hot-pink: #ff80a0;
+    --light-pink:#ffc9dc;
+
+    background-color: var(--dark-purple);
+    color: var(--light-one);
+}
+
+h1 {
+    font-family: "Poller One", serif;
+    font-size: 3em;
+    margin: 1em 0em;
+    text-align: center;
+
+}
+
+h2{
+    font-family: "Poller One", serif;
+    font-size: 1.5em;
+}
