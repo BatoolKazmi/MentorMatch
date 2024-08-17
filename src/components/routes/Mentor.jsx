@@ -1,4 +1,6 @@
 import NavBar from "../NavBar"
+import ScheduleAppointment from "../ScheduleAppointment";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays, faComments, faStar } from '@fortawesome/free-solid-svg-icons'
@@ -44,7 +46,8 @@ function Mentor() {
         <div className="mentor-icons">
           <div className="icon-container">
             <FontAwesomeIcon icon={faCalendarDays} size="5x" className="icon"/>
-            <p>Schedule a meeting</p>
+            {/* <Link to="/schedule-appointment">Schedule an Appointment</Link> */}
+            <ScheduleAppointment/>
           </div>
           <div className="icon-container">
             <FontAwesomeIcon icon={faComments} size="5x" className="icon" />
@@ -53,6 +56,7 @@ function Mentor() {
         </div>
       </div>
       </>
+      
     )
   }
   
