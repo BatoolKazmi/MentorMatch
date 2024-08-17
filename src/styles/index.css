@@ -19,13 +19,18 @@
     --light-purple: #c975eb;
     --hot-pink: #ff80a0;
     --light-pink:#ffc9dc;
+    --black: #31393C;
 
-    background-color: var(--dark-purple);
+    background: linear-gradient(90deg, var(--dark-purple), #8b8cd4);
     color: var(--light-one);
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Poller One", serif;
+}
+
+h1 {
+    
     font-size: 3em;
     margin: 1em 0em;
     text-align: center;
@@ -33,7 +38,6 @@ h1 {
 }
 
 h2{
-    font-family: "Poller One", serif;
     font-size: 1.5em;
 }
 
@@ -44,7 +48,7 @@ span {
 article {
     border: 0.2em solid var(--yellow);
     background-color: var(--yellow);
-    color: #000;
+    color: var(--black);
     border-radius: 5px;
     /* margin: 1em; */
     max-width: 20em;
