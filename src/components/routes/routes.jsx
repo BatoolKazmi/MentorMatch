@@ -3,6 +3,7 @@ import ErrorPage from "./Error";
 import Mentor from "./Mentor";
 import User  from "./User";
 import Chat from "./Chat";
+import ScheduleAppointment from "../ScheduleAppointment";
 
 const routes = [
   {
@@ -21,6 +22,10 @@ const routes = [
   {
     path: "/chat",
     element: <Chat />
+  },
+  {
+    path: "/schedule-appointment",
+    element: <ScheduleAppointment />
   }
 ];
 
