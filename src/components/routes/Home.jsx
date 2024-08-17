@@ -4,6 +4,7 @@ import firestore from "../firebase"
 import { addDoc, collection, onSnapshot} from "@firebase/firestore";
 import MentorCards from "../MentorCards";
 import "../../styles/Home.css"
+import Filter from "../Filter";
 
 function Home() {
 
@@ -42,16 +43,20 @@ function Home() {
   return (
     <>
     <NavBar/>
-    <h1>This is Home</h1>
+    <Filter/>
+    <h1>Mentors</h1>
     <div className="cards">
     <MentorCards mentors={mentors}/>
     </div>
-    <h2>This is a testing form</h2>
-    <form onSubmit={handleSave}>
-      <label htmlFor="">Enter Message (adds new data in message table): </label>
-      <input type="text" ref={messageRef}/>
-      <button type="submit">Save</button>
-    </form>
+    
+    <div className="feedback">
+      <h2>Please provide feedback ❤️:</h2>
+      <form onSubmit={handleSave} className="form">
+        <label htmlFor="">Enter Message (adds new data in message table): </label>
+        <input type="text" ref={messageRef}/>
+        <button type="submit">Save</button>
+      </form>
+    </div>
     </>
   )
 }
