@@ -1,6 +1,5 @@
 
 .navbar a {
-    align-items: center;
     box-sizing: border-box;
     margin-left: 1em;
     text-decoration: none;
@@ -15,6 +14,8 @@ a.active {
 
 .navbar {
     display: flex;
+    text-align: center;
+    align-items: center;
     justify-content: space-between;
     border-bottom: var(--light-one) solid 0.2em;
     background-color: var(var--dark-purple);

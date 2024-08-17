@@ -2,6 +2,7 @@ import { useRef } from "react"
 import NavBar from "../NavBar"
 import firestore from "../firebase"
 import { addDoc, collection } from "@firebase/firestore"
+import MentorCards from "../MentorCards";
 
 function Home() {
 
@@ -29,6 +30,7 @@ function Home() {
     <>
     <NavBar/>
     <h1>This is Home</h1>
+    <MentorCards/>
     <h2>This is a testing form</h2>
     <form onSubmit={handleSave}>
       <label htmlFor="">Enter Message (adds new data in message table): </label>
