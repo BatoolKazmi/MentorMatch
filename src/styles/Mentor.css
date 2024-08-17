@@ -1,0 +1,62 @@
+/* img {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+} */
+.icon{
+  color: white; /* Color of the icon */
+  background-color: rgb(95, 94, 169); /* Background color (circle) */
+  border-radius: 50%; /* Makes the background a circle */
+  padding: 23px; /* Controls the size of the circle */
+  display: inline-block; /* Ensures the circle is correctly formed */
+  text-align: center; 
+}
+.star{
+    color:gold;
+}
+.mentor-container {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .mentor-info {
+    text-align: center;
+  }
+  
+  .mentor-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .mentor-rating {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mentor-description {
+    flex: 1;
+  }
+  
+  .mentor-icons {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 20px; */
+  }
+  
+  .icon-container {
+    text-align: center;
+  }
+  .rating-number {
+    font-size: 2rem; /* Matches the size of the FontAwesome icon */
+    margin-left: 8px; /* Adds some space between the star and the number */
+  }
+  .center-container {
+    /* background-color: aliceblue; */
+  }

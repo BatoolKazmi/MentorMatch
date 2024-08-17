@@ -1,0 +1,34 @@
+
+.navbar a {
+    box-sizing: border-box;
+    margin-left: 1em;
+    text-decoration: none;
+    text-align: center;
+    color: var(--light-one);
+    font-size: 1.5rem;
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--light-one) solid 0.2em;
+    background-color: var(--dark-purple);
+    padding: 1em;
+}
+
+.icon {
+    color: var(--light-one);
+    font-size: 3rem;
+    margin: 0em;
+}
+
+.icon :hover, a:hover{
+    color: var(--hot-pink);
+}
+
