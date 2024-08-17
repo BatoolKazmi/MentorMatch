@@ -57,11 +57,6 @@
     font-size: 2rem; /* Matches the size of the FontAwesome icon */
     margin-left: 8px; /* Adds some space between the star and the number */
   }
-  /* .center-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
-    flex-direction: column; 
-    text-align: center; 
-  } */
+  .center-container {
+    /* background-color: aliceblue; */
+  }
