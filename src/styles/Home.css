@@ -23,3 +23,26 @@
     }
     
 }
+
+.form {
+    margin: 0.5em;
+    display: grid;
+    justify-content: center;
+    gap: 1em;
+}
+
+.form input {
+    padding: 3em;
+}
+
+.form button {
+    border-radius: 1em;
+    padding: 1em;
+    background-color: var(--hot-pink);
+    color: var(--light-one);
+    font-size: 1em;
+}
+
+.feedback {
+    margin: 2em;
+}
