@@ -1,6 +1,7 @@
 import GoalItem from '../GoalItem';
 import { useState } from 'react';
 import '../../styles/Goal.css';
+import NavBar from '../NavBar';
 
 function GoalList() {
 
@@ -41,6 +42,8 @@ function GoalList() {
     }
 
     return (
+        <>
+        <NavBar/>
         <div className='goal-list-container'>
             <div className="goal-list">
                 {goals.map((goal) => (
@@ -60,6 +63,8 @@ function GoalList() {
                 </div>
             </div>
         </div>
+        </>
+        
     );
     
 };
