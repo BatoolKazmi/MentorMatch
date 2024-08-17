@@ -1,0 +1,25 @@
+.cards {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.cards h3{
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
+/* Styles for desktop devices */
+@media (min-width: 100em) { /* Adjust the breakpoint as needed */
+    .cards {
+        grid-template-columns: repeat(4, 1fr); /* 3 column layout for desktop */
+        gap: 1em; /* Increase gap between cards */
+    }
+
+    .cards p {
+        display: block; /* Show description on desktop */
+        font-size: 1rem; /* Adjust the font size if needed */
+    }
+    
+}
