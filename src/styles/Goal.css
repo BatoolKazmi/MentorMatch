@@ -1,0 +1,64 @@
+
+.goal-item {
+ display: grid;
+ grid-template-columns: 1fr 10fr 1fr;
+ grid-template-rows: 1fr;
+
+ padding: 0.25em 0.7em;
+ margin: 0 0 0.5em 0;
+ border-radius: 0.25em;
+ justify-content: center;
+ align-items: center;
+ background-color: white;
+}
+
+.goal-item p {
+ color: rgb(57, 57, 57);
+ padding: 0.5em 1em 0.5em;
+}
+
+.goal-item input[type="checkbox"]:checked + p {
+ text-decoration: line-through;
+}
+
+.goal-item input[type="checkbox"] {
+    scale: 1.5;
+}
+
+.goal-item button {
+ background-color: #888;
+ color: white;
+ padding: 1em;
+ border: none;
+ cursor: pointer;
+ border-radius: 0.25em;
+}
+
+.goal-item button:hover {
+ background-color: #555;
+}
+
+.goal-list-container {
+  width: 20em;
+  margin: 0 auto;
+  padding: 1em;
+  gap: 1em;
+  background-color: #ecedf6;
+  border-radius: 0.25em;
+}
+
+.add-goal-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.add-goal-container input {
+    width: 100%;
+}
+
+.add-goal-container button {
+    margin-left: 1em;
+    padding: 0.5em 1em;
+}

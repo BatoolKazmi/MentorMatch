@@ -1,7 +1,7 @@
 import Home from "./Home";
 import ErrorPage from "./Error";
 import Mentor from "./Mentor";
-
+import GoalList from "./GoalList";
 const routes = [
   {
     path: "/",
@@ -11,6 +11,10 @@ const routes = [
   {
     path: "/mentor",
     element: <Mentor />,
+  },
+  {
+    path: "/goals",
+    element: <GoalList />,
   }
 ];
 
