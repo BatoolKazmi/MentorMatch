@@ -4,6 +4,7 @@ import Mentor from "./Mentor";
 import User  from "./User";
 import Chat from "./Chat";
 import GoalList from "./GoalList";
+import ScheduleAppointment from "../ScheduleAppointment";
 
 const routes = [
   {
@@ -22,10 +23,6 @@ const routes = [
   {
     path: "/chat",
     element: <Chat />
-  },
-  {
-    path: "/goals",
-    element: <GoalList />,
   }
 ];
 
