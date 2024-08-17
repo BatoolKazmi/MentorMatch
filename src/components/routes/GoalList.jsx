@@ -2,8 +2,18 @@ import GoalItem from '../GoalItem';
 import { useState } from 'react';
 import '../../styles/Goal.css';
 import NavBar from '../NavBar';
+// import firestore from '../firebase';
+// import { collection } from "@firebase/firestore";
+
+// these are commented out because they are not working currently
 
 function GoalList() {
+    // const goalsRef = collection(firestore, 'goals');
+    // const userGoals = onSnapshot(goalsRef, (snapshot) => {
+    //     setGoals(snapshot.docs.map(doc => doc.data()));
+    // });
+
+    console.log(userGoals);
 
     const [goals, setGoals] = useState([
         {
@@ -19,7 +29,7 @@ function GoalList() {
     ]);
 
     const [text, setText] = useState('');
-    function addGoal(text) {        
+    function addGoal(text) {
         setGoals([...goals, {
             id: goals.length + 1,
             text,
