@@ -8,7 +8,7 @@ function MentorCards() {
     return (
         <>
             <article>
-                <p>This is a mentor</p>
+                <h3>This is a mentor</h3>
             </article>
         </>
     );
