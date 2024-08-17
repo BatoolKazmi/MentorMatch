@@ -12,6 +12,7 @@ function Mentor() {
     name: "",
     rating: 0.0
   });
+  const [newRating, setNewRating] = useState(0);
 
   useEffect(() => {
     setMentor({
@@ -20,6 +21,16 @@ function Mentor() {
       rating: 5.0
     });
   }, []);
+  const handleRatingChange = (event) => {
+    setNewRating(event.target.value);
+  };
+
+  const handleRatingSubmit = () => {
+    setMentor((prevMentor) => ({
+      ...prevMentor,
+      rating: newRating
+    }));
+  };
     return (
       <>
       <NavBar/>
@@ -33,7 +44,7 @@ function Mentor() {
             </div>
           </div>
           <div className="mentor-description">
-            <p><strong>{mentor.name}</strong></p>
+            <h2>{mentor.name}</h2>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -42,7 +53,18 @@ function Mentor() {
             </p>
           </div>
         </div>
-
+        <div className="rating-container">
+          <label htmlFor="rating-input">Rate this mentor (1-5):</label>
+          <input
+            id="rating-input"
+            type="number"
+            min="1"
+            max="5"
+            value={newRating}
+            onChange={handleRatingChange}
+          />
+          <button onClick={handleRatingSubmit}>Submit Rating</button>
+        </div>
         <div className="mentor-icons">
           <div className="icon-container">
             <FontAwesomeIcon icon={faCalendarDays} size="5x" className="icon"/>
