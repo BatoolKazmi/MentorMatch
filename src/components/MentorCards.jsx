@@ -1,3 +1,4 @@
+import "../styles/MentorCard.css";
 
 function MentorCards({mentors}) {
 

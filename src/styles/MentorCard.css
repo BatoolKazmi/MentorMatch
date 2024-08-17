@@ -1,5 +1,8 @@
 img {
-    width: 200px;
-    height: 300px;
+    width: 15em;
+    height: 15em;
     object-fit: contain;
+    margin: 1em;
+    border: var(--black) 0.3em solid;
+    border-radius: 0.5em;
 }
