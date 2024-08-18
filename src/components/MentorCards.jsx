@@ -62,6 +62,7 @@ function MentorCards({mentors}) {
                 <h3>{mentor.name}</h3>
                 <p>★ {mentor.rating} / 5</p>
                 <p><b>Rating Count:</b> {mentor.ratingCount}</p>
+                <Link to={`/mentor/${mentor.id}`}>Mentor Details</Link>
             </article>
         ))}
          {notification && <div className="notification">{notification}</div>}
