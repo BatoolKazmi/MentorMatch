@@ -4,15 +4,18 @@ import { collection, addDoc, deleteDoc, doc, onSnapshot, updateDoc } from '@fire
 import firestore from '../firebase';
 import '../../styles/Goal.css';
 import NavBar from '../NavBar';
+import { CohereClient } from "cohere-ai";
 // import firestore from '../firebase';
 // import { collection } from "@firebase/firestore";
 
 // these are commented out because they are not working currently
 
+
 function GoalList() {
 
     const [goals, setGoals] = useState([]);
     const [text, setText] = useState('');
+    const [recommendations, setRecommendations] = useState([]);
 
     // const [goals, setGoals] = useState([
     //     {
@@ -34,6 +37,7 @@ function GoalList() {
         const unsubscribe = onSnapshot(goalCollectionRef, (snapshot) => {
             const goalsList = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
             setGoals(goalsList);
+            fetchRecommendations(goalsList); 
         });
 
         return () => unsubscribe();
@@ -78,6 +82,7 @@ function GoalList() {
     async function deleteGoal(id) {
         try {
             await deleteDoc(doc(firestore, 'goals', id));
+            setGoals(goals.filter(goal => goal.id !== id));
         } catch (e) {
             console.error("Error deleting document: ", e);
         }
@@ -93,6 +98,36 @@ function GoalList() {
             console.error("Error updating document: ", e);
         }
     }
+
+    // Using Cohere's API for steps to get Goals
+    const cohere = new CohereClient({
+        token: "YOUR_API_KEY",
+        
+    });
+
+    const fetchRecommendations = async goals => {
+        try {
+          const response = await cohere.generate({
+            model: 'command-xlarge-nightly',
+            prompt: `Given these goals: ${goals.map(goal => goal.text).join(', ')}, suggest steps to achieve them.`,
+            max_tokens: 150,
+          });
+    
+          // Log the response to understand its structure
+          console.log('Cohere API response:', response);
+    
+          // Check if the response contains generations
+          if (response && response.generations) {
+            setRecommendations(response.generations.map(gen => gen.text));
+          } else {
+            console.error('Unexpected response structure:', response);
+            setRecommendations(['Sorry, I couldn\'t generate recommendations at this time.']);
+          }
+        } catch (error) {
+          console.error('Error fetching recommendations:', error);
+          setRecommendations(['Sorry, an error occurred while fetching recommendations.']);
+        }
+    };
 
     return (
         <>
@@ -114,6 +149,14 @@ function GoalList() {
                     />
                     <button onClick={() => addGoal(text)}>Add</button>
                 </div>
+            </div>
+            <div className="ai-recommendations">
+                <h2>AI Recommendations:</h2>
+                <ul>
+                    {recommendations.map((rec, index) => (
+                        <li key={index}>{rec}</li>
+                    ))}
+                </ul>
             </div>
         </div>
         </>
