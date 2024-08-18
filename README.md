@@ -1,11 +1,27 @@
-# React + Vite
+## Inspiration
+Students and early-career professionals often lack access to people who can guide them in their educational and career paths. MentorLink aims to solve this issue by allowing individuals to connect with people with experience who can help.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What it does
+Our vision is to aid anyone seeking to improve themselves and grow, whether by setting goals, or being matched with mentors that can help! MentorLink is a platform that connects students with experienced mentors. Users can schedule virtual meetings using our inbuilt appointment booking solution, receive personalized advice through mentors or AI, and participate in group mentoring sessions.
 
-Currently, two official plugins are available:
+## How we built it
+Our tech stack included React for the front-end work, and Firebase Firestore to store data relating with our platform for the back-end. We further used Cohere's API to integrate an AI goal-setter that can help you set goals and accomplish them.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Challenges we ran into
+We had some problems writing queries in React using Firebase. It took some time to understand how to use it but eventually, we figured it out thanks to out previous knowledge with mySQL.
+
+## Accomplishments that we're proud of
+We are proud of creating a full stack application in less than a day for the first time, with using React and firebase!
+
+## What we learned
+- How to use Firebase in a real application and how to integrate it with React.
+- Got familiar with importing tools and libraries to aid our developmental process.
+
+## What's next for MentorLink
+We would love to make a signup & sign in page for mentors and users to sign up and interact with each other. 
+
+### Links
+Netlify Deploy: https://mentorlink.netlify.app/
 
 ## Install
 
