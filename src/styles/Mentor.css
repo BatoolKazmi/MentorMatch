@@ -3,7 +3,7 @@
     height: 300px;
     object-fit: contain;
 } */
-.icon{
+.icon {
   color: white; /* Color of the icon */
   background-color: rgb(95, 94, 169); /* Background color (circle) */
   border-radius: 50%; /* Makes the background a circle */
@@ -11,7 +11,7 @@
   display: inline-block; /* Ensures the circle is correctly formed */
   text-align: center; 
 }
-.star{
+.star {
     color:gold;
 }
 .mentor-container {
