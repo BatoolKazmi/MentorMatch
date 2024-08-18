@@ -11,7 +11,10 @@ function NavBar() {
             <div>
                 <NavLink to="/" >Home</NavLink>
                 <NavLink to="/goals">Goals</NavLink>
-                <NavLink to="/favorite">❤️Favorite</NavLink>
+                <NavLink to="/favorite">❤️ Favorites</NavLink>
+            </div>
+            <div>
+                <img id="logo" src="../../logo-white-background.png" alt="" />
             </div>
             <div>
                 <NavLink to="/chat">

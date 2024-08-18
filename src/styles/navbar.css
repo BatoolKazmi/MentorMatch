@@ -32,3 +32,11 @@ a.active {
     color: var(--hot-pink);
 }
 
+
+div > img#logo {
+    width: 90%;
+    height: 8em;
+    margin: 1em 2em 1em 0;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
