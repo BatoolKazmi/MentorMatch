@@ -5,6 +5,7 @@ import firestore from '../firebase';
 import '../../styles/Goal.css';
 import NavBar from '../NavBar';
 import { CohereClient } from "cohere-ai";
+import config from '../../config';
 // import firestore from '../firebase';
 // import { collection } from "@firebase/firestore";
 
@@ -100,10 +101,14 @@ function GoalList() {
     }
 
     // Using Cohere's API for steps to get Goals
-    const cohere = new CohereClient({
-        token: "YOUR_API_KEY",
+    // const cohere = new CohereClient({
+    //     token: "an0xLFwJm4T6GiR403cEJZxXPqMBcpGfRafvqxhM",
         
+    // });
+    const cohere = new CohereClient({
+        token: config.COHERE_API_KEY,
     });
+
 
     const fetchRecommendations = async goals => {
         try {

@@ -17,3 +17,11 @@ npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/free-regular-svg-icons
 npm i --save @fortawesome/free-brands-svg-icons
 npm i --save @fortawesome/react-fontawesome@latest
+
+##
+Make a config.js in your source folder then input the following code 
+const config = {
+    COHERE_API_KEY: 'YOUR-API-KEY',
+};
+
+export default config;
