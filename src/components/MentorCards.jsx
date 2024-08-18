@@ -63,6 +63,10 @@ function MentorCards({mentors}) {
                 <p>★ {mentor.rating} / 5</p>
                 <p><b>Rating Count:</b> {mentor.ratingCount}</p>
                 <Link to={`/mentor/${mentor.id}`}>Mentor Details</Link>
+                <button 
+                    onClick={() => handleAddRemoveFavorites(mentor)}
+                    // disabled={isMentorFavorite(mentor)}
+                    >{isMentorFavorite(mentor) ? "❌ Remove from Favorite" : "❤️ Add to Favorites"}</button>
             </article>
         ))}
          {notification && <div className="notification">{notification}</div>}
