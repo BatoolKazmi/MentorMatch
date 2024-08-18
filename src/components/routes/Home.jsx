@@ -37,24 +37,51 @@ function Home() {
     setFilteredMentors(filteredList);
 };
 
-// Handeling Reviews
+// // Handeling Reviews
+//   const messageRef = useRef();
+//   const ref = collection(firestore, "messages");
+
+//   const handleSave = async(e) => {
+//     e.preventDefault();
+//     console.log(messageRef.current.value);
+
+//     let data = {
+//       message: messageRef.current.value,
+//     }
+
+//     try{
+//       addDoc(ref, data);
+//     }catch(e){
+//       console.log(e);
+//     }
+
+//   }
+
+  // Handling Reviews
   const messageRef = useRef();
   const ref = collection(firestore, "messages");
 
   const handleSave = async(e) => {
     e.preventDefault();
-    console.log(messageRef.current.value);
+
+    const message = messageRef.current.value.trim();
+
+    if (message === "") {
+        alert("Please enter a message before submitting.");
+        return;
+    }
 
     let data = {
-      message: messageRef.current.value,
+        message: message,
     }
 
-    try{
-      addDoc(ref, data);
-    }catch(e){
-      console.log(e);
+    try {
+        await addDoc(ref, data);
+        // Clear the textarea after submission
+        messageRef.current.value = "";
+    } catch (e) {
+        console.log(e);
     }
-
   }
 
   return (
@@ -70,7 +97,10 @@ function Home() {
       <h2>Please provide feedback ❤️:</h2>
       <form onSubmit={handleSave} className="form">
         <label htmlFor="review">Enter Message (adds new data in message table): </label>
-        <input type="text" name="review" ref={messageRef}/>
+        <textarea
+              ref={messageRef}
+            />
+        {/* <input type="text" name="review" ref={messageRef}/> */}
         <button type="submit">Save</button>
       </form>
     </div>

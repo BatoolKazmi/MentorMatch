@@ -62,11 +62,13 @@ function ScheduleAppointment({ onClose }) {
             value={dateTime}
           />
           {error && <p className="error">{error}</p>}
-          <label>Notes:</label>
-          <textarea
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-          />
+          <div className='notes'>
+            <label>Notes: </label>
+            <textarea
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+            />
+          </div>
           <div className="modal-buttons">
             <button type="submit">Submit</button>
             <button type="button" onClick={onClose}>Cancel</button>

@@ -19,14 +19,14 @@ a.active {
     justify-content: space-between;
     border-bottom: var(--light-one) solid 0.2em;
     background-color: var(--dark-purple);
-    padding: 1em;
 }
 
 .icon {
     color: var(--light-one);
-    font-size: 3rem;
+    font-size: 1.5em !important; /* Increase the size here */
     margin: 0em;
 }
+
 
 .icon :hover, a:hover{
     color: var(--hot-pink);

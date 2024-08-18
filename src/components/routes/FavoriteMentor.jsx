@@ -3,6 +3,7 @@ import { collection, onSnapshot } from "@firebase/firestore";
 import firestore from "../firebase";
 import MentorCards from "../MentorCards";
 import NavBar from "../NavBar";
+import "../../styles/favorite.css"
 
 function FavoriteMentors() {
     const [favorites, setFavorites] = useState([]);
@@ -19,8 +20,8 @@ function FavoriteMentors() {
     return (
         <>
             <NavBar />
-            <h1>Favorite Mentors</h1>
-            <div className="cards">
+            <h1>❤️ Favorite Mentors</h1>
+            <div className="cards fav">
                 <MentorCards mentors={favorites} />
             </div>
         </>

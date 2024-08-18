@@ -10,8 +10,8 @@ h2{
 .filter {
     margin: 2em;
     border-radius: 0.5em;
-    background-color: var(--light-one);
-    padding: 0 0 1em 0;
+    background-color: var(--yellow);
+    padding: 4em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,17 +29,22 @@ h2{
 
 .filter div {
     margin: 1em;
+    text-align: center; /* Ensure the content inside the div is centered */
 }
 
-.filter button{
+.filter button {
     border-radius: 0.5em;
     width: 100%;
     padding: 1em 7em;
     margin: 0 auto;
     background-color: var(--dark-purple);
     color: var(--light-one);
+    margin: 0 auto; /* This will center the button horizontally */
+    display: block; /* Ensure the button takes the full width of its container */
 }
 
-.filter select {
-    margin: 0 0.5em;
+
+.filter input, .filter select{
+    padding: 0.6em;
+    margin: 0.2em 0em;
 }
