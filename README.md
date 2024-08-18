@@ -21,7 +21,8 @@ We are proud of creating a full stack application in less than a day for the fir
 We would love to make a signup & sign in page for mentors and users to sign up and interact with each other. 
 
 ### Links
-Netlify Deploy: https://mentorlink.netlify.app/
+**Netlify Deploy:** https://mentorlink.netlify.app/
+**Here is the devpost link:** https://devpost.com/software/mentormatch-fnexma
 
 ## Install
 
@@ -42,5 +43,3 @@ const config = {
 
 export default config;
 
-Here is the devpost link:
-https://devpost.com/software/mentormatch-fnexma
