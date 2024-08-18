@@ -4,6 +4,7 @@ import Mentor from "./Mentor";
 import User  from "./User";
 import Chat from "./Chat";
 import GoalList from "./GoalList";
+import FavoriteMentor from "./FavoriteMentor";
 import ScheduleAppointment from "../ScheduleAppointment";
 import GoalItem from "../GoalItem";
 
@@ -26,8 +27,12 @@ const routes = [
     element: <Chat />
   }, 
   {
-    path:"/goals",
-    element: <GoalList/>
+    path: "/goals",
+    element: <GoalList />,
+  },
+  {
+    path:"/favorite",
+    element: <FavoriteMentor/>
   }
 ];
 
