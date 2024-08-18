@@ -9,4 +9,21 @@ h2{
 
 .filter {
     margin: 1em;
+    border-radius: 0.5em;
+    background-color: var(--light-one);
+    padding: 1em;
+    color: var(--dark-purple);
+}
+
+.filter label {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.filter div{
+    margin: 1em;
+}
+
+.filter button {
+    text-align: center;
 }

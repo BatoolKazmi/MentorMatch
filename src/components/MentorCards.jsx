@@ -18,16 +18,6 @@ function MentorCards({mentors}) {
         ))}
         </>
     );
-
-    // <img src={movie.poster} alt={alt} />
-    //             <h2>{movie.title}</h2>
-    //             {/* What should go here? */}
-    //             <Link to={`/movies/${id}`}>Movie Details</Link>
-    //             <div>   
-    //             <button onClick={promptForApiKey} disabled={isAdding}>
-    //             {isAdding ? "Adding..." : "Quick Add to Watchlist"}
-    //             </button>
-    //             </div>
 }
 
 export default MentorCards;
