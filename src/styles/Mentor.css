@@ -123,6 +123,7 @@
     flex: 2;
     padding-left: 1em;
     color: var(--dark-purple);
+    margin: 2em;
 }
 
 .mentor-description h2 {

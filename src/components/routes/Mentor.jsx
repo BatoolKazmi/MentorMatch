@@ -118,6 +118,10 @@ function Mentor() {
             </p>
           </div>
         </div>
+        <div className="mentor-description">
+        <p><b>Program: </b> {mentor.program}</p>
+        <p><b>Level of Study: </b>{mentor.levelOfStudy}</p>
+        </div>
         <div className="rating-container">
           <label htmlFor="rating-input">Rate this mentor (1-5):</label>
           <input

@@ -19,7 +19,7 @@ function FavoriteMentors() {
     return (
         <>
             <NavBar />
-            <h1>Favorite Mentors</h1>
+            <h1>❤️ Favorite Mentors</h1>
             <div className="cards">
                 <MentorCards mentors={favorites} />
             </div>
