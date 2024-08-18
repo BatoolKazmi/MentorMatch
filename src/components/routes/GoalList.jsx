@@ -137,6 +137,7 @@ function GoalList() {
     return (
         <>
         <NavBar/>
+        <h1>Goals</h1>
         <div className='goal-list-container'>
             <div className="goal-list">
                 {goals.map((goal) => (
@@ -155,15 +156,15 @@ function GoalList() {
                     <button onClick={() => addGoal(text)}>Add</button>
                 </div>
             </div>
-            <div className="ai-recommendations">
-                <h2>AI Recommendations:</h2>
+        </div>
+        <div className="ai-recommendations">
+                <h2>✨🤖 AI Recommendations:</h2>
                 <ul>
                     {recommendations.map((rec, index) => (
                         <li key={index}>{rec}</li>
                     ))}
                 </ul>
             </div>
-        </div>
         </>
         
     );
