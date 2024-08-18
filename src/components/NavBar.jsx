@@ -19,7 +19,7 @@ function NavBar() {
                         <ForumIcon className='icon' />
                     </IconButton>
                 </NavLink>
-                <NavLink to="/user">
+                <NavLink to="">
                     <IconButton>
                         <PersonIcon className="icon" />
                     </IconButton>
