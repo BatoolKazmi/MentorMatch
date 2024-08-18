@@ -1,7 +1,6 @@
 import Home from "./Home";
 import ErrorPage from "./Error";
 import Mentor from "./Mentor";
-import User  from "./User";
 import Chat from "./Chat";
 import GoalList from "./GoalList";
 import FavoriteMentor from "./FavoriteMentor";
@@ -18,10 +17,6 @@ const routes = [
   {
     path: "/mentor/:id",
     element: <Mentor />,
-  },
-  {
-    path: "/user",
-    element: <User />
   },
   {
     path: "/chat",
