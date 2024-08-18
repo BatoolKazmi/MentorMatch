@@ -1,43 +1,110 @@
 import NavBar from "../NavBar"
 import ScheduleAppointment from "../ScheduleAppointment";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { collection, query, where, getDocs, doc, updateDoc } from "firebase/firestore";
+import firestore from "../firebase";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays, faComments, faStar } from '@fortawesome/free-solid-svg-icons'
 import "../../styles/Mentor.css";
 
 function Mentor() {
+  let { id } = useParams();
+  console.log(id)
   const [mentor, setMentor] = useState({
-    image: "",
+    photo: "",
     name: "",
-    rating: 0.0
+    rating: 0.0,
+    ratingCount: 0,
   });
   const [newRating, setNewRating] = useState(0);
 
   useEffect(() => {
-    setMentor({
-      image: "https://i.pinimg.com/736x/df/73/39/df733940625dea4a0e575c02782e4cb7.jpg",
-      name: "Rishad Kumar",
-      rating: 5.0
-    });
-  }, []);
+    const fetchMentor = async () => {
+      if (id) {
+        const mentorCollectionRef = collection(firestore, "mentors");
+        const q = query(mentorCollectionRef, where("id", "==", id));
+        try {
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+      
+            const mentorDoc = querySnapshot.docs[0];
+            const mentorData = mentorDoc.data();
+            setMentor({
+              id: mentorDoc.id, // Store document ID
+              ...mentorData
+            });
+          } else {
+            console.log("No document found with id:", id);
+          }
+        } catch (error) {
+          console.error("Error fetching mentor:", error);
+        }
+      }
+    };
+
+    fetchMentor();
+  }, [id]);
+
   const handleRatingChange = (event) => {
     setNewRating(event.target.value);
   };
+  
+  const handleRatingSubmit = async () => {
+    const { rating, ratingCount } = mentor;
+    const parsedNewRating = parseFloat(newRating);
 
-  const handleRatingSubmit = () => {
-    setMentor((prevMentor) => ({
-      ...prevMentor,
-      rating: newRating
-    }));
-  };
+    console.log("Updating mentor with ID:", mentor.id);
+    if (!mentor.id) {
+      console.error("Mentor document ID is not available.");
+      return;
+    }
+     // Calculate the new average rating
+     const updatedRatingCount = ratingCount + 1;
+     const updatedRating = (rating * ratingCount + parsedNewRating) / updatedRatingCount;
+
+     const roundedRating = parseFloat(updatedRating.toFixed(2));
+  try {
+    // Query to find the document by the custom 'id' field
+    const mentorCollectionRef = collection(firestore, "mentors");
+    const q = query(mentorCollectionRef, where("id", "==", mentor.id));
+    
+    const querySnapshot = await getDocs(q);
+
+    if (!querySnapshot.empty) {
+      // Assuming only one document matches the query
+      const mentorDoc = querySnapshot.docs[0];
+      const mentorDocRef = mentorDoc.ref; // Get the document reference
+
+      // Update the document's rating and ratingCount
+      await updateDoc(mentorDocRef, {
+        rating: roundedRating,  // Store rating as a string if needed for display
+        ratingCount: updatedRatingCount
+      });
+
+      // Update local state after successfully updating Firestore
+      setMentor((prevMentor) => ({
+        ...prevMentor,
+        rating: updatedRating.toFixed(2),
+        ratingCount: updatedRatingCount
+      }));
+
+    } else {
+      console.log("No document found with the id:", mentor.id);
+    }
+
+  } catch (error) {
+    console.error("Error updating rating:", error);
+  }
+};
     return (
       <>
       <NavBar/>
       <div className="center-container">
         <div className="mentor-container"> 
           <div className="mentor-info">
-            <img src={mentor.image} alt={mentor.name} className="mentor-image" />
+            <img src={mentor.photo} alt={mentor.name} className="mentor-image" />
             <div className="mentor-rating">
               <FontAwesomeIcon icon={faStar} size="2x" className="star"/>
               <span className="rating-number">{mentor.rating}</span>

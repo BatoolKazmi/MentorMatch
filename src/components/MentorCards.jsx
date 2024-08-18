@@ -2,6 +2,7 @@ import "../styles/MentorCard.css";
 import { useState, useEffect } from "react";
 import { collection, addDoc, deleteDoc, onSnapshot, query, where, getDocs } from "@firebase/firestore";
 import firestore from "./firebase";
+import { Link } from "react-router-dom";
 
 function MentorCards({mentors}) {
 
@@ -61,10 +62,6 @@ function MentorCards({mentors}) {
                 <h3>{mentor.name}</h3>
                 <p>★ {mentor.rating} / 5</p>
                 <p><b>Rating Count:</b> {mentor.ratingCount}</p>
-                <button 
-                    onClick={() => handleAddRemoveFavorites(mentor)}
-                    // disabled={isMentorFavorite(mentor)}
-                    >{isMentorFavorite(mentor) ? "❌ Remove from Favorite" : "❤️ Add to Favorites"}</button>
             </article>
         ))}
          {notification && <div className="notification">{notification}</div>}
