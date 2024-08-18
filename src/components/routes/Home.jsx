@@ -27,15 +27,15 @@ function Home() {
     const { searchName, program, levelOfStudy } = filters;
 
     const filteredList = mentors.filter(mentor => {
-      return (
-        (searchName === "" || mentor.name.toLowerCase().includes(searchName.toLowerCase())) &&
-        (program === "" || mentor.program === program) &&
-        (levelOfStudy === "" || mentor.levelOfStudy === levelOfStudy)
-      );
+        return (
+            (searchName === "" || mentor.name.toLowerCase().includes(searchName.toLowerCase())) &&
+            (program === "" || mentor.program.includes(program)) &&
+            (levelOfStudy === "" || mentor.levelOfStudy.includes(levelOfStudy))
+        );
     });
 
     setFilteredMentors(filteredList);
-  };
+};
 
 // Handeling Reviews
   const messageRef = useRef();

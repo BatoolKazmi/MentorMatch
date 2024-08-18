@@ -62,3 +62,9 @@
     margin-left: 1em;
     padding: 0.5em 1em;
 }
+
+.ai-recommendations{
+  color: var(--black);
+  font-size: 0.9em;
+  margin: 2em 0em;
+}
