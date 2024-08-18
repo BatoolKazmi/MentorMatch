@@ -9,18 +9,35 @@ import Filter from "../Filter";
 function Home() {
 
   const [mentors, setMentors] = useState([]);
+  const [filteredMentors, setFilteredMentors] = useState([]);
   
 
   useEffect(() => {
     const mentorCollectionRef = collection(firestore, 'mentors');
     const unsubscribe = onSnapshot(mentorCollectionRef, (snapshot) => {
-      setMentors(snapshot.docs.map(doc => doc.data()));
+      const mentorsList = snapshot.docs.map(doc => doc.data());
+      setMentors(mentorsList);
+      setFilteredMentors(mentorsList);
     });
 
-    // Cleanup the subscription when the component unmounts
     return () => unsubscribe();
   }, []);
 
+  const handleFilterChange = (filters) => {
+    const { searchName, program, levelOfStudy } = filters;
+
+    const filteredList = mentors.filter(mentor => {
+      return (
+        (searchName === "" || mentor.name.toLowerCase().includes(searchName.toLowerCase())) &&
+        (program === "" || mentor.program === program) &&
+        (levelOfStudy === "" || mentor.levelOfStudy === levelOfStudy)
+      );
+    });
+
+    setFilteredMentors(filteredList);
+  };
+
+// Handeling Reviews
   const messageRef = useRef();
   const ref = collection(firestore, "messages");
 
@@ -43,17 +60,17 @@ function Home() {
   return (
     <>
     <NavBar/>
-    <Filter/>
+    <Filter onFilterChange={handleFilterChange}/>
     <h1>Mentors</h1>
     <div className="cards">
-    <MentorCards mentors={mentors}/>
+    <MentorCards mentors={filteredMentors}/>
     </div>
     
     <div className="feedback">
       <h2>Please provide feedback ❤️:</h2>
       <form onSubmit={handleSave} className="form">
-        <label htmlFor="">Enter Message (adds new data in message table): </label>
-        <input type="text" ref={messageRef}/>
+        <label htmlFor="review">Enter Message (adds new data in message table): </label>
+        <input type="text" name="review" ref={messageRef}/>
         <button type="submit">Save</button>
       </form>
     </div>
