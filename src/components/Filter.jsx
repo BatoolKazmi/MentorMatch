@@ -29,8 +29,6 @@ function Filter({ onFilterChange }) {
     };
 
 
-
-
     return (
         <>
             <div className="filter">
