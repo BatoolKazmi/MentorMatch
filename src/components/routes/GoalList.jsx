@@ -4,6 +4,10 @@ import { collection, addDoc, deleteDoc, doc, onSnapshot, updateDoc } from '@fire
 import firestore from '../firebase';
 import '../../styles/Goal.css';
 import NavBar from '../NavBar';
+// import firestore from '../firebase';
+// import { collection } from "@firebase/firestore";
+
+// these are commented out because they are not working currently
 
 function GoalList() {
 
