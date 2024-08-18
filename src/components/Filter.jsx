@@ -50,30 +50,32 @@ function Filter({ onFilterChange }) {
                     <div>
                         <label htmlFor="program">Program: </label>
                         <select name="program" id="program" value={program} onChange={handleProgramChange}>
-                            <option value="Select">Select Rating</option>
-                            <option value="">Computer Science</option>
-                            <option value="">Software Engineering</option>
-                            <option value="">Marketing</option>
-                            <option value="">Finance</option>
-                            <option value="">Product Management</option>
-                            <option value="">Cybersecurity</option>
-                            <option value="">Artificial Intelligence & Machine Learning</option>
+                            <option value="">Select Program</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Software Engineering">Software Engineering</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Product Management">Product Management</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+                            <option value="Artificial Intelligence & Machine Learning">Artificial Intelligence & Machine Learning</option>
                         </select>
                     </div>
                     <div>
                         <label htmlFor="program">Level of Study: </label>
                         <select name="levelOfStudy" id="levelOfStudy" value={levelOfStudy} onChange={handleLevelOfStudyChange}>
-                            <option value="Select">Select</option>
-                            <option value="">Less than Secondary/High School</option>
-                            <option value="">Secondary/High School</option>
-                            <option value="">Undergraduate University</option>
-                            <option value="">Graduate University (Masters, Professional, Doctoral, etc)</option>
-                            <option value="">Code School/Bootcamp</option>
-                            <option value="">Other Vocational/Trade Program or Apprenticeship</option>
-                            <option value="">Post Doctorate</option>
+                            <option value="">Select Level</option>
+                            <option value="Less than Secondary/High School">Less than Secondary/High School</option>
+                            <option value="Secondary/High School">Secondary/High School</option>
+                            <option value="Undergraduate University">Undergraduate University</option>
+                            <option value="Graduate University (Masters, Professional, Doctoral, etc)">Graduate University (Masters, Professional, Doctoral, etc)</option>
+                            <option value="Code School/Bootcamp">Code School/Bootcamp</option>
+                            <option value="Other Vocational/Trade Program or Apprenticeship">Other Vocational/Trade Program or Apprenticeship</option>
+                            <option value="Post Doctorate">Post Doctorate</option>
                         </select>
                     </div>
-                    <button>Find Mentor!</button>
+                    <div>
+                        <button>Find Mentor!</button>
+                    </div>
                 </form>
             </div>
         </>
