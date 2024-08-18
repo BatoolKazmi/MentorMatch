@@ -1,0 +1,161 @@
+.chat-list-container {
+    padding: 20px;
+  }
+  
+  .chat-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .chat-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .chat-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .mentor-photo {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; /* Makes the photo rounded */
+    margin-right: 10px; 
+    object-fit: cover; 
+  }
+  
+  .mentor-name {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .chat-page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    background-color: inherit;
+  }
+  
+  .chat-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mentor-images {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the photo rounded */
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  .mentor-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mentor-info h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .online-status {
+    font-size: 14px;
+    color: #4caf50; /* Green color for online status */
+  }
+  
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .message {
+    max-width: 40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+  }
+  
+  .message-text {
+    margin: 0;
+    color: black;
+    word-break: break-word;
+  }
+  .message.mentor {
+    align-self: flex-start;
+    background-color: #e1f5fe; /* Light blue for received messages */
+    border: 1px solid #b3e5fc; /* Slightly darker border */
+  }
+  
+  .message.mentee {
+    align-self: flex-end;
+    background-color: #c8e6c9; /* Light green for sent messages */
+    border: 1px solid #a5d6a7; /* Slightly darker border */
+  }
+  .chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .attachment-button {
+    margin-right: 10px; /* Space between attachment button and input */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .image-button {
+    margin-right: 10px; /* Space between image button and send button */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .send-button {
+    background-color: #4caf50; /* Green color for the send button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .back-button {
+    /* position: absolute;
+    left: 10px; */
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+  }
+  

@@ -1,5 +1,6 @@
 import NavBar from "../NavBar"
 import ScheduleAppointment from "../ScheduleAppointment";
+import ScheduleAppointmentLink from "../ScheduleAppointmentLink";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -134,14 +135,14 @@ function Mentor() {
         </div>
         <div className="mentor-icons">
           <div className="icon-container">
-            <FontAwesomeIcon icon={faCalendarDays} size="5x" className="icon"/>
-            {/* <Link to="/schedule-appointment">Schedule an Appointment</Link> */}
-            <ScheduleAppointment/>
+            <ScheduleAppointmentLink/>
           </div>
-          <div className="icon-container">
-            <FontAwesomeIcon icon={faComments} size="5x" className="icon" />
-            <p>Chat</p>
-          </div>
+          <Link to={`/chat/${id}`} className="icon-link">
+            <div className="icon-container">
+              <FontAwesomeIcon icon={faComments} size="5x" className="icon" />
+              <p>Chat</p>
+            </div>
+          </Link>
         </div>
       </div>
       </>

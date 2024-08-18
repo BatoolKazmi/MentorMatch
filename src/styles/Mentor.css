@@ -49,7 +49,10 @@
     justify-content: space-around;
     /* margin-top: 20px; */
   }
-  
+  .icon-link {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Ensure the text color is inherited from parent */
+  }
   .icon-container {
     text-align: center;
   }

@@ -6,6 +6,7 @@ import GoalList from "./GoalList";
 import FavoriteMentor from "./FavoriteMentor";
 import ScheduleAppointment from "../ScheduleAppointment";
 import GoalItem from "../GoalItem";
+import ChatPage from "./ChatPage";
 
 const routes = [
   {
@@ -28,7 +29,11 @@ const routes = [
   {
     path:"/favorite",
     element: <FavoriteMentor/>
-  }
+  },
+  {
+    path: "/chat/:id",
+    element: <ChatPage />
+  }, 
 ];
 
 export default routes;
