@@ -14,7 +14,7 @@ const routes = [
     errorElement: <ErrorPage />,
   },
   {
-    path: "/mentor",
+    path: "/mentor/:id",
     element: <Mentor />,
   },
   {
