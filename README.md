@@ -1,3 +1,13 @@
+# What is MentorLink/MentorMatch?
+
+A place where students can connect with professionals who can help guide them in their professional journeys.
+
+## Links
+**Demo:** https://youtu.be/uvHWErC8BlM
+**Netlify Deploy:** https://mentorlink.netlify.app/
+**Devpost link:** https://devpost.com/software/mentormatch-fnexma
+
+
 ## Inspiration
 Students and early-career professionals often lack access to people who can guide them in their educational and career paths. MentorLink aims to solve this issue by allowing individuals to connect with people with experience who can help.
 
@@ -20,13 +30,8 @@ We are proud of creating a full stack application in less than a day for the fir
 ## What's next for MentorLink
 We would love to make a signup & sign in page for mentors and users to sign up and interact with each other. 
 
-### Links
-**Netlify Deploy:** https://mentorlink.netlify.app/
-
-**Here is the devpost link:** https://devpost.com/software/mentormatch-fnexma
 
 ## Install
-
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 npm install firebase
